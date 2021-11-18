@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+//Belum sesuai soal
 func (l PalindromeUsecase) LongestPalindrome(body model.Palindrome) string {
 	splittedWord := strings.Split(body.Word, "")
 	for i := 0; i <= len(splittedWord)-1; i++ {
