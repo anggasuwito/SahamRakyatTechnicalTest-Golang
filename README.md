@@ -3,7 +3,7 @@
 go run main.go
 ````
 
-####API
+#### API
 ````
 - convert decimal to binary
 localhost:8088/binary?output=binary
