@@ -1,0 +1,30 @@
+create database db_technicaltest_2;
+
+use db_technicaltest_2;
+
+create table transaksi(
+id int primary key auto_increment,
+tanggal_order datetime,
+status_pelunasan varchar(200),
+tanggal_pembayaran datetime
+);
+
+insert into transaksi(tanggal_order,status_pelunasan,tanggal_pembayaran)values
+("2020-12-01 11:30:00","lunas","2020-12-01 12:00:00"),
+("2020-12-02 10:30:00","pending",null);
+
+select * from transaksi;
+
+create table detail_transaksi(
+id int primary key auto_increment,
+id_transaksi int,
+harga int,
+jumlah int,
+subtotal int
+);
+
+insert into detail_transaksi(id_transaksi,harga,jumlah,subtotal)values
+(1,20000,2,40000),
+(2,25000,4,100000);
+
+select t.id,t.tanggal_order,t.status_pelunasan as status,t.tanggal_pembayaran,dt.harga as total,dt.jumlah as jumlah_barang from transaksi t join detail_transaksi dt on t.id = dt.id_transaksi;
