@@ -8,7 +8,7 @@ import (
 func (l PalindromeUsecase) LongestPalindrome(body model.Palindrome) string {
 	var result string
 	var current string
-	removedSpace := strings.ReplaceAll(body.Word, " ", "")
+	removedSpace := strings.ReplaceAll(strings.ToLower(body.Word), " ", "")
 	for i := 0; i < len(removedSpace); i++ {
 		odd := expandFromCenter(removedSpace, i, i)
 		even := expandFromCenter(removedSpace, i, i+1)
