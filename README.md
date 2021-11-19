@@ -5,7 +5,7 @@ go run main.go
 
 #### API
 ````
-- convert decimal to binary
+- convert decimal to binary (POST)
 localhost:8088/binary?output=binary
     
     body
@@ -17,7 +17,7 @@ localhost:8088/binary?output=binary
         "input": 29
     }
 
-- convert binary to decimal
+- convert binary to decimal (POST)
 localhost:8088/binary?output=decimal
     
     body
