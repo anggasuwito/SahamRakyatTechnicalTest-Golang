@@ -18,5 +18,9 @@ func Init() {
 	palindromeRoute := palindrome.PalindromeController{Usecase: palindromeUsecase}
 	palindromeRoute.Palindrome(r)
 
+	r.GET("", func(context *gin.Context) {
+		return
+	})
+
 	r.Run(os.Getenv("PORT"))
 }
